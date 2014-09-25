@@ -1,0 +1,53 @@
+---
+layout: default
+title: Home
+---
+
+<h1>Church Deploy</h1>
+
+<div >
+  <p>Church Deploy exists to equip local churches with robust and scalable web technology to spread the Gospel of Jesus Christ in their cities and to the nations.</p>
+  <p>The core of Church Deploy is an open-source CMS that is available as a free download:</p>
+  <p>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=churchdeploy&amp;repo=churchdeploy&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=churchdeploy&amp;repo=churchdeploy&amp;type=fork&amp;count=true" width="100" height="20" title="Fork on GitHub"></iframe>
+  </p>
+  <p>Also feel free to enjoy <a href="/articles">Articles</a> and the <a href="/log">Log</a>. You can peruse some recent posts below.</p>
+  <br>
+  <hr>
+</div>
+
+<br>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

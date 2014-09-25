@@ -1,0 +1,22 @@
+---
+layout: page
+title: Log
+---
+<span class="post-date">
+  A curated list of links related to technology and the Church.
+</span>
+
+<div class="post-list">
+
+  <hr>
+  {% for log in site.data.log %}
+  <a href="{{ log.link }}">
+    <div class="post">
+      <h2 class="post-title">{{ log.title }}</h2>
+      <span class="post-date">{{ log.date }}</span>
+      <p>{{ log.description }}</p>
+    </div>
+  </a>
+  <hr>
+  {% endfor %}
+</div>

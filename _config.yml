@@ -1,0 +1,46 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Server
+port:             4001
+
+# Setup
+title:            ChurchDeploy
+tagline:          'Websites, technology, and design for churches'
+description:      'Websites, technology, and design for churches.'
+url:              http://churchdeploy.com
+baseurl:          /
+
+author:
+  name:           'Jonathan Simcoe'
+  url:            https://github.com/jdsimcoe
+
+paginate:         5
+
+# Collections
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:path/
+#     title: projects
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/churchdeploy/churchdeploy.github.io
+
+typekit:
+  id:             xcp6xta
+
+ua:
+  id:             UA-24881851-1      

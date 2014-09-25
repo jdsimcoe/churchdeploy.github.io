@@ -1,0 +1,11 @@
+/*
+ * Mixins
+ *
+ * Some tools to work with
+ */
+
+ /* Opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: unquote("alpha(opacity=#{$opacity * 100})");
+}

@@ -1,0 +1,17 @@
+---
+layout: page
+title: Articles
+---
+
+<div class="post-list">
+  <hr>
+  {% for post in site.posts %}
+  <a href="{{ post.url }}">
+    <div class="post">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+    </div>
+  </a>
+  <hr>
+  {% endfor %}
+</div>

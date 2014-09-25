@@ -1,0 +1,15 @@
+/*
+ * Projects
+ *
+ * Houses all Simko projects
+ */
+
+.project-logo {
+  float: left;
+  margin-right: 25px;
+  height: 50px;
+
+  @media (min-width: 48em) {
+    height: 75px;
+  }
+}
